@@ -1,5 +1,6 @@
 data_bbl
-data_st/wav/uncompressed/
+data_st
+data_stbbl
 **/__pycache__
 **/.DS_Store
 **/.ipynb_checkpoints
