@@ -58,7 +58,7 @@ def replace(str):
             str = str.replace(c, same[c])
     return str
 
-def remove_redundant(filename):
+def remove_redundant(filename, char_set=supported):
     data = []
     stat = {}
     unsupported = set()
@@ -72,7 +72,7 @@ def remove_redundant(filename):
                     stat[c] = 1
                 else:
                     stat[c] += 1
-                if c != ' ' and c not in supported:
+                if c != ' ' and c not in char_set:
                     unsupported.add(c)
 
     with open(filename, 'w') as f:
